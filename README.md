@@ -8,8 +8,8 @@
 
 
 # inplementation
-1, create 2 routes in server.js, post & get. Use projectData obj as local saving for server.     
+1, create 2 routes in server.js, post & get. Use projectData obj as local storage for server.     
 2, go to openweathermap to apply for API Key.    
-3, using this API key to get weather info.     
+3, using this API key to get temprature info.     
 4, post temp+ data+feeling to server by using "/post", save it to projectData.    
-5, retrieve what saved in step4 back by using "/get" and update UI accordingly.     
+5, retrieve what saved in projectData back by using "/get" and update UI accordingly.     
