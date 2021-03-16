@@ -5,10 +5,10 @@ a homework project for udacity frontend nanodegree.
 This is an wather APP, which could get the temprature & data by accessing https://openweathermap.org/
 
 # Prerequsite
-"node.js"
-"body-parser": "1.19.0",
-"cors": "2.8.5",
-"express": "4.17.1"
+"node.js"     
+"body-parser": "1.19.0"    
+"cors": "2.8.5"    
+"express": "4.17.1"       
 
 # Run
 1, install node.js, then use npm to install body-parser, cors, express.   
