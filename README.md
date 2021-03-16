@@ -14,6 +14,6 @@
 4, post temp+ data+feeling to server by using "/post", save it to projectData.    
 5, retrieve what saved in projectData back by using "/get" and update UI accordingly.     
 
-# running
-![img](https://github.com/jiujuzhou/openWeather/blob/main/app_ui.JPG)
-![img](https://github.com/jiujuzhou/openWeather/blob/main/server.JPG)
+# running screenshot
+![img]()
+![img]()
