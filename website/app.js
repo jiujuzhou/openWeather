@@ -2,10 +2,10 @@
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let curDay = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
+let curDay = (d.getMonth()+1)+'.'+ d.getDate()+'.'+ d.getFullYear();
 //api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=a1bcd489d2a560a1a93be3267f82d099
 const baseURL = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-const apiKey = ',us&appid=a1bcd489d2a560a1a93be3267f82d099';
+const apiKey = ',us&units=metric&appid=a1bcd489d2a560a1a93be3267f82d099';
 
 
 //get the weather from the weather website. and post it on my website running on local server. 
@@ -18,7 +18,8 @@ function doWeather(e) {
     .then(function (fromAPI) {
       const my_post = {   //this is what I'm going to post
       date: curDay, 
-      temp: fromAPI.main.temp, 
+      //temp:  Math.round((fromAPI.main.temp - 273.15)*10)/10,  //from Kelven to ℃, round to 1 decimal.
+      temp: fromAPI.main.temp,
       content: feeling_input
     }
       postData('/post', my_post)   //post data to our local server
@@ -73,7 +74,7 @@ const updateUI = async () => {
 		const data = await request.json();
 		console.log("Doing updateUI: ", data);
 		document.getElementById("date").innerHTML = `Date: ${data.date}`;
-		document.getElementById("temp").innerHTML = `Temperature(°F): ${data.temp}`;
+		document.getElementById("temp").innerHTML = `Temperature(°C): ${data.temp}`;
 		document.getElementById("content").innerHTML = `Feelings: ${data.content}`;
 	} catch (error) {
 		console.error("error", error);
